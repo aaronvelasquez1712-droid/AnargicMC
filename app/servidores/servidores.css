@@ -1,0 +1,69 @@
+.servidores-page-container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    background-color: #120505;
+    background-image: 
+      radial-gradient(ellipse at center, rgba(239, 68, 68, 0.08) 0%, transparent 60%),
+      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0zM20 20h20v20H20z' fill='rgba(239,68,68,0.015)'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+.lobby-section {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.lobby-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.lobby-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.lobby-version-badge {
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.lobby-desc {
+    color: #a1a1aa;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    line-height: 1.5;
+}
+
+.lobby-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 60px 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .lobby-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .lobby-version-badge {
+        margin-left: 0;
+    }
+}

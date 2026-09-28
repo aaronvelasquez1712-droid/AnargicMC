@@ -1,0 +1,17 @@
+- [ ] 1. Base de Datos
+  - [ ] Crear `actualizacion_10.sql`
+  - [ ] Añadir columnas `discord_avatar`, `discord_banner`, `discord_color` a `discord_links`
+  - [ ] Crear tabla `profile_comments` con RLS
+- [ ] 2. Backend (API)
+  - [ ] Actualizar `/api/discord/callback` para guardar avatar, banner y color.
+- [ ] 3. Buscador y Perfiles Públicos
+  - [ ] Crear barra de búsqueda en Configuración y Perfil
+  - [ ] Adaptar `/perfil` para soportar `?u=username`
+  - [ ] Añadir diseño UI para ver perfiles de otros
+- [ ] 4. Cosméticos Discord Dinámicos
+  - [ ] Renderizar cosméticos en Configuración y Perfil usando los hashes de Discord
+  - [ ] Estilos CSS para el marco de color sólido (accent_color)
+- [ ] 5. Sistema de Comentarios
+  - [ ] Crear UI de comentarios en `/perfil`
+  - [ ] Implementar paginación (10 comentarios por página)
+  - [ ] Lógica para publicar, editar y eliminar (autor y dueño del perfil)

@@ -1,0 +1,547 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 100;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  mix-blend-mode: screen;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-accent {
+  color: #00bfff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem; /* Increased spacing */
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-weight: 600; /* Bolder */
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; /* Space between text and arrow */
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, #00bfff, #0080aa);
+  color: #000 !important;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.8px;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(0, 191, 255, 0.3);
+  text-decoration: none;
+}
+
+.nav-download-link:hover {
+  color: #000 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-login-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-login-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* User Profile Menu */
+.user-profile-menu {
+  position: relative;
+}
+
+.user-profile-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.user-profile-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.nav-username {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.profile-chevron {
+  color: #a1a1aa;
+  transition: transform 0.2s;
+}
+.profile-chevron.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-search {
+  padding: 8px 12px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: 0;
+  width: 220px;
+  background: rgba(20, 20, 26, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: fadeInDown 0.2s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #e4e4e7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 0.5rem 0;
+}
+
+.logout-item {
+  color: #ef4444;
+}
+
+.logout-item:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* NAV DROPDOWNS */
+.nav-dropdown-wrap {
+  position: relative;
+}
+
+.nav-dropdown-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.nav-dropdown-btn:hover { color: #fff; }
+
+.nav-chevron {
+  transition: transform 0.2s ease;
+}
+.nav-chevron.open {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 22px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 170px;
+  background: rgba(18, 18, 24, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  animation: fadeInDown 0.18s ease forwards;
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+
+.nav-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+
+/* NOTIFICATION BELL */
+.notif-wrapper {
+  position: relative;
+}
+
+.notif-bell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: #a1a1aa;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notif-bell:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.notif-dot {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  border: 2px solid #0a0a0f;
+}
+
+/* NOTIF DROPDOWN */
+.notif-dropdown {
+  position: absolute;
+  top: calc(100% + 15px);
+  right: -60px; /* Aligned slightly better for the notification icon position */
+  width: 320px;
+  background: rgba(20, 20, 26, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  animation: fadeInDown 0.2s ease forwards;
+  overflow: hidden;
+}
+
+.notif-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.notif-header h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.notif-body {
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.notif-body::-webkit-scrollbar {
+  width: 4px;
+}
+.notif-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.notif-item {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.notif-item:last-child {
+  border-bottom: none;
+}
+
+.notif-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.notif-item.unread {
+  background: rgba(0, 191, 255, 0.05);
+  border-left: 3px solid #00bfff;
+}
+
+.notif-message {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #e4e4e7;
+  line-height: 1.4;
+}
+
+.notif-time {
+  font-size: 0.75rem;
+  color: #a1a1aa;
+}
+
+.notif-empty {
+  padding: 24px;
+  text-align: center;
+  color: #a1a1aa;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.friend-request-item {
+  background: rgba(16, 185, 129, 0.05) !important;
+  border-left: 3px solid #10b981 !important;
+}
+
+.friend-request-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn-accept-friend, .btn-decline-friend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  color: white;
+  transition: all 0.2s;
+}
+
+.btn-accept-friend {
+  background: #10b981;
+}
+
+.btn-accept-friend:hover {
+  background: #059669;
+}
+
+.btn-decline-friend {
+  background: #ef4444;
+}
+
+.btn-decline-friend:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link, .nav-dropdown-btn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+
+  .nav-dropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .notif-dropdown {
+    position: fixed;
+    top: 90px;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .profile-dropdown {
+    position: fixed;
+    top: 90px;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+

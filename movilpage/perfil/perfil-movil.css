@@ -1,0 +1,243 @@
+.movil-perfil-container {
+  padding-bottom: 2rem;
+}
+
+.m-loading, .m-unauth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  color: #a1a1aa;
+  padding: 2rem;
+}
+
+.m-unauth-icon {
+  margin-bottom: 1rem;
+  color: #3b82f6;
+}
+
+.m-unauth h2 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.m-btn-login {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Banner */
+.m-perfil-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.m-perfil-banner-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, transparent 30%, var(--background) 100%);
+}
+
+/* Header */
+.m-perfil-header {
+  position: relative;
+  text-align: center;
+  margin-top: -60px;
+  padding: 0 1.5rem;
+  z-index: 10;
+}
+
+.m-avatar-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+}
+
+.m-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--background);
+  object-fit: cover;
+  background: var(--card-bg);
+}
+
+.m-avatar-frame {
+  position: absolute;
+  top: -10%; left: -10%;
+  width: 120%; height: 120%;
+  pointer-events: none;
+}
+
+.m-perfil-header h1 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.m-rank-badge {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.2);
+  color: #a855f7;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats */
+.m-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.m-stat-box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1rem 0.5rem;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-icon { margin-bottom: 0.5rem; }
+.stat-icon.kills { color: #10b981; }
+.stat-icon.deaths { color: #ef4444; }
+.stat-icon.score { color: #fbbf24; }
+
+.stat-val {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.stat-lbl {
+  color: #a1a1aa;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Sections */
+.m-perfil-section {
+  padding: 0 1.5rem;
+}
+
+.m-perfil-section h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.m-tabs {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.m-tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #a1a1aa;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.m-tab.active {
+  background: #fff;
+  color: #000;
+}
+
+/* Cosmetics */
+.m-cosmetics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.m-cosmetic-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.m-cosmetic-card.locked {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+.m-cosmetic-img {
+  width: 100%;
+  aspect-ratio: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.m-cosmetic-img img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.m-cosmetic-card h4 {
+  color: #fff;
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.m-equip-btn {
+  width: 100%;
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+  border: none;
+  padding: 6px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.m-equip-btn.equipped {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.m-buy-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: #a1a1aa;
+  padding: 6px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}

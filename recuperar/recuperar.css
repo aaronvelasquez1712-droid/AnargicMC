@@ -1,0 +1,106 @@
+.recuperar-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #080810;
+  overflow: hidden;
+}
+
+.recuperar-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.recuperar-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+}
+
+.recuperar-card {
+  padding: 3rem 2.5rem;
+  border-radius: 24px;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #3b82f6;
+}
+
+.recuperar-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.recuperar-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #3b82f6;
+}
+
+.recuperar-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.recuperar-subtitle {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.recuperar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recuperar-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

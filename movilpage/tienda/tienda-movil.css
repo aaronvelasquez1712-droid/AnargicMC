@@ -1,0 +1,212 @@
+.movil-tienda-container {
+  padding: 1.5rem 1rem;
+}
+
+.m-tienda-header {
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.m-tienda-header h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.m-tienda-header p {
+  color: #a1a1aa;
+  font-size: 0.95rem;
+}
+
+/* Category Pills (Horizontal Scroll) */
+.m-category-pills {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+  margin: 0 -0.5rem 1.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.m-category-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.m-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: #a1a1aa;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.m-pill.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.m-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Plan Cards */
+.m-plan-card {
+  position: relative;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.m-plan-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: var(--plan-color);
+}
+
+.m-popular-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.m-plan-header {
+  margin-bottom: 1.5rem;
+}
+
+.m-plan-header h2 {
+  color: var(--plan-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.m-plan-price .price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.m-plan-price .period {
+  color: #a1a1aa;
+  font-size: 0.9rem;
+}
+
+.m-plan-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.m-feature-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d4d4d8;
+  font-size: 0.9rem;
+}
+
+.m-check {
+  color: var(--plan-color);
+  flex-shrink: 0;
+}
+
+.m-buy-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Key Cards */
+.m-key-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.m-key-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.m-key-icon-wrapper {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-key-info h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.m-key-price {
+  color: var(--key-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.m-add-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.m-add-btn:active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0.95);
+}
+
+.m-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #a1a1aa;
+}
+
+.m-empty-icon {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}

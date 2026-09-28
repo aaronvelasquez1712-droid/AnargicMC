@@ -1,0 +1,95 @@
+.mas-container {
+  padding: 1.5rem 1rem;
+  min-height: 100%;
+}
+
+.mas-header h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  padding-left: 0.5rem;
+}
+
+.menu-group {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--card-border);
+  background: transparent;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.menu-item-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.menu-icon {
+  color: #fff;
+}
+
+/* Colors for specific icons */
+.icon-wrapper { background: rgba(255, 255, 255, 0.1); }
+.icon-wrapper:has(.inventory) { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.icon-wrapper:has(.staff) { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+.icon-wrapper:has(.rules) { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+.icon-wrapper:has(.bans) { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.icon-wrapper:has(.settings) { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+
+.menu-label {
+  color: var(--foreground);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.menu-arrow {
+  color: #71717a;
+}
+
+/* Logout */
+.logout-group {
+  margin-top: 3rem;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.logout-wrapper {
+  background: transparent;
+}
+
+.logout-btn .menu-label {
+  color: #ef4444;
+}
+.logout-btn .logout {
+  color: #ef4444;
+}
